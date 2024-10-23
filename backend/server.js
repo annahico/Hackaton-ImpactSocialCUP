@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const colaboradorRoutes = require('./routes/colaboradorRoutes');
 require('dotenv').config();
+
+app.use('/api/colaboradores', colaboradorRoutes);
 
 const app = express();
 app.use(cors());
